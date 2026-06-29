@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: MoocPass
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${MOOC_DATABASES_URL}
+    username: ${MOOC_DATABASES_USERNAME}
+    password: ${MOOC_DATABASES_PASSWORD}
+
+# JWT Configuration
+jwt:
+  secret: MoocPassSecretKeyForJwtAuthenticationTokenGeneration2026WithSufficientLength
+  expiration : 86400000
+
+# CaptchaDecoder Configuration
+captcha:
+  decoder-url: http://localhost:5000
